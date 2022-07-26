@@ -1,0 +1,96 @@
+/*
+font-family: 'Big Shoulders Display', cursive; heading
+font-family: 'Lexend Deca', sans-serif; paragraph
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 15px;
+  background: hsl(0, 0%, 95%);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+}
+@media (max-width: 760px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    margin: 2rem 1rem;
+  }
+  body {
+    margin-top: 13rem;
+  }
+}
+.container section {
+  padding: 2rem;
+}
+.container section:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+}
+.container section:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+}
+.container section:nth-child(3) {
+  background: hsl(179, 100%, 13%);
+}
+.container section img {
+  height: 1.5rem;
+}
+.container section h1 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  margin: 1rem 0;
+  color: hsl(0, 0%, 95%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.container section p {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+.container section button {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: capitalize;
+  height: 2.5rem;
+  width: 9rem;
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 3rem;
+  margin-top: 4rem;
+}
+.btn-1 {
+  color: hsl(31, 77%, 52%);
+}
+.btn-2 {
+  color: hsl(184, 100%, 22%);
+}
+.btn-3 {
+  color: hsl(228, 45%, 44%);
+}
+button:hover {
+  color: hsl(0, 0%, 95%);
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 95%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
